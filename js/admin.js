@@ -744,14 +744,15 @@ function addTableDonHang(data) {
     TONGTIEN = 0;
     for (var i = 0; i < data.length; i++) {
         var d = data[i];
+        console.log("don hang: ",d);
         s += `<tr>
             <td style="width: 5%">` + (i + 1) + `</td>
             <td style="width: 13%">` + d.MaHD + `</td>
             <td style="width: 7%">` + d.MaND + `</td>
-            <td style="width: 20%">` + /*d.sp*/ + `</td>
-            <td style="width: 15%">` + parseFloat(d.TongTien) + `</td>
+            <td style="width: 20%">` + "001" + `</td>
+            <td style="width: 15%">` + stringToNum(d.TongTien) + `</td>
             <td style="width: 10%">` + d.NgayLap + `</td>
-            <td style="width: 10%">` + d.TinhTrang + `</td>
+            <td style="width: 10%">` + (d.TrangThai == 1 ? true : false) + `</td>
             <td style="width: 10%">
                 <div class="tooltip">
                     <i class="fa fa-check" onclick="duyet('` + d.MaHD + `', true)"></i>
@@ -764,7 +765,9 @@ function addTableDonHang(data) {
                 
             </td>
         </tr>`;
-        TONGTIEN += stringToNum(d.tongtien);
+
+                TONGTIEN += stringToNum(d.TongTien);
+
     }
 
     s += `</table>`;
