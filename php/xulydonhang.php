@@ -6,7 +6,7 @@
     switch ($_POST['request']) {
     	case 'getall':
 				$donhang = (new HoaDonBUS())->select_all();
-//                $ctdonhang = (new ChiTietHoaDonBUS())->select_all();
+                $ctdonhang = (new ChiTietHoaDonBUS())->select_all();
 		    	die (json_encode($donhang));
     		break;
 
