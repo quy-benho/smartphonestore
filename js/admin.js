@@ -812,7 +812,7 @@ function getListDonHang() {
 
 // Duyệt
 function duyet(maDonHang, duyetDon) {
-    var u = getListUser();
+    var u = getCurrentUser();
     for (var i = 0; i < u.length; i++) {
         for (var j = 0; j < u[i].donhang.length; j++) {
             if (u[i].donhang[j].ngaymua == maDonHang) {

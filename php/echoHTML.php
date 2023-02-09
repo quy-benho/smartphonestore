@@ -256,8 +256,8 @@ function addFooter()
     <!-- ============== Footer ============= -->
     <div class="copy-right">
         <p>
-            All rights reserved © 2018-' . date("Y") . ' - Designed by
-            <span style="color: #eee; font-weight: bold">H-group</span>
+            All rights reserved ©' . date("Y") . ' - Designed by
+            <span style="color: #eee; font-weight: bold">Group</span>
         </p>
     </div>';
 }
